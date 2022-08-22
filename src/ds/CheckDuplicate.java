@@ -10,12 +10,16 @@ class CheckDuplicate {
             for (int i = 0; i < size; i++) {
                 input[i] = (int) Integer.parseInt(sc.next());
             }
-            boolean result = containsDuplicate(input);
+            // boolean result = containsDuplicate(input);
+            System.out.println("Enter k");
+            Integer k = Integer.parseInt(sc.next());
+            boolean result = containsDuplicate2(input, k);
+            
             System.out.println("Contains Duplicate: " + result);
             sc.close();
         }
         catch (Exception ex) {
-
+            throw ex;
         }
         
     }
@@ -29,6 +33,30 @@ class CheckDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<Integer>();
         for (int i = 0; i < nums.length; i++) {
+            if (!set.add(Integer.valueOf(nums[i]))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * https://leetcode.com/problems/contains-duplicate-ii/
+     * 
+     * @param nums
+     * @param k
+     * @return
+     */
+    public static boolean containsDuplicate2(int[] nums, int k) {
+        HashSet<Integer> set = new HashSet<Integer>();
+        int i = 0;
+        for (; i <= k && i < nums.length; i++) {
+            if (!set.add(Integer.valueOf(nums[i]))) {
+                return true;
+            }
+        }
+        for (int j = i - k - 1; i < nums.length; i++, j++) {
+            set.remove(nums[j]);
             if (!set.add(Integer.valueOf(nums[i]))) {
                 return true;
             }
