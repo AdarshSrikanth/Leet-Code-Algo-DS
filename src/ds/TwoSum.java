@@ -25,6 +25,13 @@ class TwoSum {
         }
     }
 
+    /**
+     * https://leetcode.com/problems/two-sum/
+     * 
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> sumMap = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++) {
