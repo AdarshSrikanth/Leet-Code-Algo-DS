@@ -24,4 +24,41 @@ public class Util {
         }
         println("\n");
     }
+
+    public static void inorderTraversal(TreeNode root) {
+        if (root != null) {
+            inorderTraversal(root.left);
+            System.out.print(root.val + " ");
+            inorderTraversal(root.right);
+        }
+    }
+
+    public static void preorderTraversal(TreeNode root) {
+        if (root != null) {
+            System.out.print(root.val + " ");
+            inorderTraversal(root.left);
+            inorderTraversal(root.right);
+        }
+    }
+
+    public static void postorderTraversal(TreeNode root) {
+        if (root != null) {
+            inorderTraversal(root.left);
+            inorderTraversal(root.right);
+            System.out.print(root.val + " ");
+        }
+    }
+
+    public static class TreeNode {
+        int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode() {}
+        public TreeNode(int val) { this.val = val; }
+        public TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 }
