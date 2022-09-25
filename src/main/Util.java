@@ -16,4 +16,12 @@ public class Util {
     public static void println(String str) {
         System.out.println(str);
     }
+
+    public static void printarr(int[] arr, String str) {
+        println(str);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        println("\n");
+    }
 }
