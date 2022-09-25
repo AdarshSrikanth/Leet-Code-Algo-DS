@@ -1,4 +1,4 @@
-package ds;
+package main.ds;
 
 import java.util.Scanner;
 
@@ -17,11 +17,18 @@ class MergeSortedArray {
         for (int i = 0; i < n; i++) {
             nums2[i] = (int) Integer.parseInt(sc.next());
         }
+        mergeInPlace(nums1, m, nums2, n);
+        System.out.println("Merged Array:\n");
+        for (int i = 0; i < m+n; i++) {
+            System.out.print(nums1[i] + " ");
+        }
         sc.close();
     }
 
     /**
      * https://leetcode.com/problems/merge-sorted-array/
+     * 
+     * Uses O(n) extra space. Similar to merge sort's merge routine
      * 
      * @param nums1
      * @param m
@@ -61,6 +68,30 @@ class MergeSortedArray {
             nums1[k] = nums2[j];
             j++;
             k++;
+        }
+    }
+
+    public static void mergeInPlace(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1;
+        int j = n - 1;
+        int k = m + n - 1;
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                nums1[k--] = nums1[i--];
+                // Good use of post decrement. Makes code compact
+                // i--;
+                // k--;
+            } else {
+                nums1[k--] = nums2[j--];
+                // j--;
+                // k--;
+            }
+        }
+        while (i >= 0 && k >= 0) {
+            nums1[k--] = nums1[i--];
+        }
+        while (j >= 0 && k >= 0) {
+            nums1[k--] = nums2[j--];
         }
     }
 }

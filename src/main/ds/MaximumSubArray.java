@@ -1,4 +1,4 @@
-package ds;
+package main.ds;
 
 import java.util.Scanner;
 
