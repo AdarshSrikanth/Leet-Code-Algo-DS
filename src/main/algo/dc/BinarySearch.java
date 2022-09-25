@@ -1,4 +1,4 @@
-package main.algo;
+package main.algo.dc;
 
 import java.util.Scanner;
 
