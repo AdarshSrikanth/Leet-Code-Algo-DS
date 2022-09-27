@@ -46,7 +46,7 @@ public class Util {
             inorderTraversal(root.left);
             inorderTraversal(root.right);
             System.out.print(root.val + " ");
-        }
+        } 
     }
 
     public static class TreeNode {
@@ -60,5 +60,28 @@ public class Util {
             this.left = left;
             this.right = right;
         }
+    }
+
+    public static int[][] getAdjacencyMatrix(Scanner sc) {
+        println("Enter the number of nodes in G");
+        int n = Integer.parseInt(sc.next());
+        int[][] adjM = new int[n][n];
+        for(int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                adjM[i][j] = Integer.parseInt(sc.next());
+            }
+        }
+        return adjM;
+    }
+
+    public static int[][] getEdgeList(Scanner sc) {
+        println("Enter count of edges followed by the edges e=(u v)");
+        int e = Integer.parseInt(sc.next());
+        int[][] edges = new int[e][2];
+        for (int i = 0; i < e; i++) {
+            edges[i][0] = Integer.parseInt(sc.next());
+            edges[i][1] = Integer.parseInt(sc.next());
+        }
+        return edges;
     }
 }

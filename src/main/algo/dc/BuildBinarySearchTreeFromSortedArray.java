@@ -22,6 +22,9 @@ public class BuildBinarySearchTreeFromSortedArray {
      * Root.Left = median of the left sub tree
      * Root.right = median of the right sub tree
      * 
+     * Recurrance tree: T(n) = 2T(n/2) + O(1)
+     * Time Complexity: Big-Theta (n)
+     * 
      * @param input
      * @return
      */
