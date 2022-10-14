@@ -1,4 +1,4 @@
-package main.ds;
+package main.algo.dc;
 
 import java.util.*;
 
