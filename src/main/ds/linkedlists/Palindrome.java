@@ -12,6 +12,7 @@ public class Palindrome {
         Scanner sc = new Scanner(System.in);
         ListNode head = Util.buildLinkedList(sc);
         Util.println("Is palindrome: " + isPalindrome(head));
+        sc.close();
     }
 
     public static boolean isPalindrome(ListNode head) {
