@@ -62,6 +62,32 @@ public class Util {
         }
     }
 
+    // Definition for singly-linked list.
+    public static class ListNode {
+        public int val;
+        public ListNode next;
+        public ListNode() {}
+        public ListNode(int val) { this.val = val; }
+        public ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+
+    public static ListNode buildLinkedList(Scanner sc) {
+        int[] arr = get_input_array(sc);
+        ListNode head = null;
+        ListNode temp = null;
+        for (int i = 0; i < arr.length; i++) {
+            ListNode node = new ListNode(arr[i]);
+            if (temp != null) {
+                temp.next = node;
+            }
+            if (i == 0) {
+                head = node;
+            }
+            temp = node;
+        }
+        return head;
+    }
+
     public static int[][] getAdjacencyMatrix(Scanner sc) {
         println("Enter the number of nodes in G");
         int n = Integer.parseInt(sc.next());
