@@ -118,4 +118,8 @@ public class Util {
         }
         return edges;
     }
+
+    public static Scanner getScanner() {
+        return new Scanner(System.in);
+    }
 }
