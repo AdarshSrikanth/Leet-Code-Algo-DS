@@ -13,11 +13,9 @@ public class CoinChange {
 
     public static int coinChange(int[] coins, int amount) {
         Arrays.sort(coins);
-        int n = coins.length;
         int[] dp = new int [amount + 1];
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
-        int min = Integer.MAX_VALUE;
         for (int j = 1; j <= amount; j++) {
             for (int i = 0; i < coins.length && coins[i] <= j; i++) {
                 if (dp[j - coins[i]] ==Integer.MAX_VALUE) {

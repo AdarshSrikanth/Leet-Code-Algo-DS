@@ -10,6 +10,7 @@ public class ValidParanthesis {
         Scanner sc = Util.getScanner();
         String s = sc.nextLine();
         Util.println("Valid parenthesis? - " + isValid(s));
+        sc.close();
     }
 
     public static boolean isValid(String s) {

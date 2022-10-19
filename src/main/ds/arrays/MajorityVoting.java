@@ -14,6 +14,14 @@ public class MajorityVoting {
         Util.printarr(majorityElement(nums).toArray(), "Majority Algo: \n");
     }
 
+    /**
+     * Return elements that appear more than n/3 times.
+     * In majoirity voting problem if a person has more than n/2 votes, he is declared a majority.
+     * this is checked in O(2 x n) time with no extra space using the BM algo 
+     * 
+     * @param nums
+     * @return
+     */
     public static List<Integer> majorityElement(int[] nums) {
         int n = nums.length;
         int k = Math.floorDiv(n, 3);

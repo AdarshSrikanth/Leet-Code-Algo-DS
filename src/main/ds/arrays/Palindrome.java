@@ -12,7 +12,7 @@ public class Palindrome {
         Scanner sc = new Scanner(System.in);
         int num = Integer.parseInt(sc.nextLine());
         Util.println("Is Palindrome: " + isPalindrome(num));
-
+        sc.close();
     }
 
     public static boolean isPalindrome(int x) {
