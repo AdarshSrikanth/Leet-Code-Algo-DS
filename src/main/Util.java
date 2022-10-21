@@ -81,6 +81,17 @@ public class Util {
 
     public static ListNode buildLinkedList(Scanner sc) {
         int[] arr = get_input_array(sc);
+        return buildListNode(arr);
+    }
+
+    public static void printLinkedList(ListNode head) {
+        while(head!=null) {
+            println(head.val + "->");
+            head = head.next;
+        }
+    }
+
+    public static ListNode buildListNode(int[] arr) {
         ListNode head = null;
         ListNode temp = null;
         for (int i = 0; i < arr.length; i++) {
@@ -94,13 +105,6 @@ public class Util {
             temp = node;
         }
         return head;
-    }
-
-    public static void printLinkedList(ListNode head) {
-        while(head!=null) {
-            println(head.val + "->");
-            head = head.next;
-        }
     }
 
     public static int[][] getAdjacencyMatrix(Scanner sc) {
