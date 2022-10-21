@@ -10,6 +10,7 @@ public class ClimbStairs {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.next());
         Util.println(climbStairs(n) + " ways to reach step " + n);
+        sc.close();
     }
 
     public static int climbStairs(int n) {

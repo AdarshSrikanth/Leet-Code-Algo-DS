@@ -96,6 +96,13 @@ public class Util {
         return head;
     }
 
+    public static void printLinkedList(ListNode head) {
+        while(head!=null) {
+            println(head.val + "->");
+            head = head.next;
+        }
+    }
+
     public static int[][] getAdjacencyMatrix(Scanner sc) {
         println("Enter the number of nodes in G");
         int n = Integer.parseInt(sc.next());
