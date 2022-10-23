@@ -41,4 +41,25 @@ class MaximumSubArray {
 
         return maxSoFar;
     }
+
+    /**
+     * 
+     * DP - Memoization. Note kadane's solution is memory optimized version of this bottom up memoization.
+     * 
+     * @param nums
+     * @return
+     */
+    /*
+    public static int maximumSubArray(int[] nums) {
+        int n = nums.length;
+        int opt[] = new int[n + 1];
+        opt[0] = 0;
+        int max = Integer.MIN_VALUE;
+        for (int i = 1; i <= n; i++) {
+            opt[i] = Math.max(opt[i - 1] + nums[i - 1], nums[i - 1]);
+            max = Math.max(opt[i], max);
+        }
+        return max;
+    }
+    */
 }
