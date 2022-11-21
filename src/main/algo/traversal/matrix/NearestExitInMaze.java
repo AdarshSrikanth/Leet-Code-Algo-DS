@@ -13,10 +13,19 @@ public class NearestExitInMaze {
         Util.println("Nearest exit: " + obj.nearestExit(maze, entrance));
     }
 
+    /**
+     * https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
+     * 
+     * Time complexity: O (m + n)
+     * 
+     * @param maze
+     * @param entrance
+     * @return
+     */
     public int nearestExit(char[][] maze, int[] entrance) {
         // BFS finds the shortest path from start node to target node.
         // On using DFS, all possible paths have to be backtracked to find the shortest path length.
-        
+
         Queue<Cell> q = new LinkedList<Cell>();
         int currSteps = 0;
         q.offer(new Cell(entrance[0], entrance[1]));
