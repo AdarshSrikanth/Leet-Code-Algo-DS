@@ -18,6 +18,18 @@ public class VerifySudoku {
         Util.println("Is valid Sudoku: " + isValidSudoku(sudoku));
     }
 
+    /**
+     * Given a Sudoku board, it can be verified if the board is a valid sudoku in polynomial time.
+     * Certificate: Sudoku board
+     * Certifier: - Check if none of the 9 rows have no duplicate numbers
+     *            - Check if none of the 9 columns have no duplicate numbers
+     *            - Check if none of the 9 - 3 x 3 cells do not have any duplicate numbers
+     * 
+     * run time - O(n^3) - efficient solution
+     * 
+     * @param board
+     * @return
+     */
     public static boolean isValidSudoku(String[][] board) {
         int rows = board.length;
         int columns = board[0].length;
