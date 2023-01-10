@@ -28,6 +28,9 @@ class TwoSum {
     /**
      * https://leetcode.com/problems/two-sum/
      * 
+     * TwoSum - Find the index of pairs of numbers adding up to given sum
+     * Ds: HashMap         Algo: Naive             Analysis: O(n)
+     * 
      * @param nums
      * @param target
      * @return

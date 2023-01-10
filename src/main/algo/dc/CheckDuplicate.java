@@ -29,6 +29,9 @@ class CheckDuplicate {
     /**
      * https://leetcode.com/problems/contains-duplicate/
      * 
+     * CheckDuplicate - duplicate element in an array
+     * DS: HashSet         Algo: Naive             Analysis: O(n)
+     * 
      * @param nums
      * @return
      */
@@ -44,6 +47,9 @@ class CheckDuplicate {
 
     /**
      * https://leetcode.com/problems/contains-duplicate-ii/
+     * 
+     * CheckDuplicate2 - duplicate element between given indices
+     * DS: HashSet         Algo: Naive             Analysis: O(n)
      * 
      * @param nums
      * @param k

@@ -2,6 +2,11 @@ package main.algo.dc;
 
 import java.util.Scanner;
 
+/*
+    MaximumSubArray - find the subarray with maximum sum (Kadane's algo)
+    DS: Array           Algo: Kadane's algo     Analysis: O(n)
+    Next best algo needs O(nlogn) space and time
+ */
 class MaximumSubArray {
     public static void main (String[] args) {
         try {

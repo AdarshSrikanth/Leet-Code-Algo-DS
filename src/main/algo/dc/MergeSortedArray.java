@@ -2,6 +2,12 @@ package main.algo.dc;
 
 import java.util.Scanner;
 
+/*
+    MergeSortedArray - merge two sorted arrays into a single array
+    DS: Array           Algo: Merge sort        Analysis: O(m+n)
+    Uses O(n) extra space. In-place sorting could be explored
+ */
+
 class MergeSortedArray {
     public static void main(String[] args) {
         System.out.println("Enter the array size followed by the numbers");

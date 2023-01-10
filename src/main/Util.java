@@ -2,6 +2,9 @@ package main;
 
 import java.util.Scanner;
 
+/**
+ * Utility functions to read input, display output and work with common data structures
+ */
 public class Util {
     public static int[] get_input_array(Scanner sc) {
         System.out.println("Enter the array size followed by the numbers");
