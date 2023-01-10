@@ -86,7 +86,7 @@ public class Util {
 
     public static void printLinkedList(ListNode head) {
         while(head!=null) {
-            println(head.val + "->");
+            System.out.print(head.val + " -> ");
             head = head.next;
         }
     }
