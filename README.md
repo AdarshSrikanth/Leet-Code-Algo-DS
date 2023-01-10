@@ -18,5 +18,5 @@ Leet code solutions to daily challenges and ds, algo practice problems
     8. stacks
     9. queue
 
-- Util
+- Util\
     Utility methods to read inputs, display outputs, and manipulate common data structures
