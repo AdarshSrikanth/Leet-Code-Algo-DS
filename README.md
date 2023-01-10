@@ -19,4 +19,5 @@ Leet code solutions to daily challenges and ds, algo practice problems
     9. queue
 
 - Util\
-    \Utility methods to read inputs, display outputs, and manipulate common data structures
+    <br />
+    Utility methods to read inputs, display outputs, and manipulate common data structures
