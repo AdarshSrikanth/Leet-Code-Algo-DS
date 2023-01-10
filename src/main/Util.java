@@ -58,7 +58,7 @@ public class Util {
     }
 
     public static class TreeNode {
-        int val;
+        public int val;
         public TreeNode left;
         public TreeNode right;
         public TreeNode() {}
