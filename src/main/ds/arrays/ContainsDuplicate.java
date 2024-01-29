@@ -13,7 +13,7 @@ public class ContainsDuplicate {
         System.out.println("\nInput array contains duplicates: " + containsDuplicate(nums));
     }
 
-    // Time: O(nlogn) and Memory: O(n)
+    // Time: O(nlogn) and Memory: O(1)
     public static boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 1; i++) {
@@ -24,7 +24,7 @@ public class ContainsDuplicate {
         return false;
     }
 
-    // Time: O(n) and Memory: O(2n)
+    // Time: O(n) and Memory: O(n)
     public static boolean containsDuplicate2(int[] nums) {
         HashSet<Integer> set = new HashSet<Integer>();
         for (int i = 0; i < nums.length; i++) {
