@@ -1,5 +1,6 @@
 package main.ds.heaps;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 import main.Util;
@@ -26,5 +27,13 @@ public class StoneGame {
         }
         
         return minHeap.size() == 1 ? minHeap.poll() : 0;
+    }
+
+    static class SortDescending implements Comparator<Integer> {
+        
+        @Override
+        public int compare (Integer a, Integer b) {
+            return b - a;
+        }
     }
 }
