@@ -48,4 +48,37 @@ public class PerfectSquares {
         int r = (int) Math.floor(Math.sqrt(n));
         return n == r * r;
     }
+
+    /*
+     * More time solution. Calculate the perfect squares at the start and save it to avoid calculating perferct squares in the future.
+     * 
+     * Space: O(n + sqrt(n)) = O(n)
+     * Time: O(nlogn)
+     * 
+     */
+    public static int numSquares2 (int n) {
+        if (n < 4) {
+            return n;
+        }
+        int closestPerfectSqInt = (int)Math.floor(Math.sqrt(n));
+        int[] perfectSquares = new int[closestPerfectSqInt];
+
+        for (int i = 0; i < closestPerfectSqInt; i++) {
+            perfectSquares[i] = (i + 1) * (i + 1);
+        }
+
+        int[] dp = new int[n + 1];
+        for (int i = 0; i < 4; i++) {
+            dp[i] = i;
+        }
+
+        for (int i = 4; i <= n; i++) {
+            dp[i] = dp[i - 1] + 1;
+            for (int j = 0; j < perfectSquares.length && perfectSquares[j] <= i; j++) {
+                dp[i] = Math.min(dp[i], dp[i - perfectSquares[j]] + 1);
+            }
+        }
+
+        return dp[n];
+    }
 }
